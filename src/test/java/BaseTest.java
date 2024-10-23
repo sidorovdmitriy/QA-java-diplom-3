@@ -9,6 +9,12 @@ import manager.BrowserFactory;
 import org.junit.After;
 import org.junit.Before;
 import org.openqa.selenium.WebDriver;
+
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.util.Properties;
+
 /**
  * Родительский класс для тестов, содержит
  * создание фейкового пользователя
@@ -22,8 +28,11 @@ public class BaseTest {
 
     @Before
     @Step("Открыть base url")
-    public void setUp() {
-        driver = BrowserFactory.getDriver("chrome");
+    public void setUp() throws IOException {
+        Properties props = new Properties();
+        FileInputStream ip = new FileInputStream("C:\\Users\\79276\\IdeaProjects\\new\\QA-java-diplom-3\\src\\main\\resources\\application.properties");
+        props.load(ip);
+        driver = BrowserFactory.getDriver(props.getProperty("browser"));
         driver.get(Client.BASE_URL);
         userClient = new UserClient();
         userClient.createUser(user);
