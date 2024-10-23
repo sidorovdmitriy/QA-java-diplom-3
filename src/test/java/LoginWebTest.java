@@ -1,7 +1,7 @@
 import io.qameta.allure.junit4.DisplayName;
-import main.page.MainPage;
-import main.page.ResetPasswordPage;
-import main.page.SignUpPage;
+import page.MainPage;
+import page.ResetPasswordPage;
+import page.SignUpPage;
 import org.junit.Test;
 import org.junit.Assert;
 

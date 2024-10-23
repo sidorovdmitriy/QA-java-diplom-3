@@ -29,14 +29,14 @@ public class BaseTest {
         userClient.createUser(user);
     }
 
-//    @After
-//    @Step("Закрытие браузера")
-//    public void cleanUp() {
-//        Credentials credentials = new Credentials(user.getEmail(), user.getPassword());
-//        Response response = UserClient.login(credentials);
-//        if (response.body().jsonPath().getString("accessToken") != null) {
-//            userClient.delete(response);
-//        }
-//        driver.quit();
-//    }
+    @After
+    @Step("Закрытие браузера")
+    public void cleanUp() {
+        Credentials credentials = new Credentials(user.getEmail(), user.getPassword());
+        Response response = UserClient.login(credentials);
+        if (response.body().jsonPath().getString("accessToken") != null) {
+            userClient.delete(response);
+        }
+        driver.quit();
+    }
 }

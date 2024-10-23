@@ -1,5 +1,5 @@
 import io.qameta.allure.junit4.DisplayName;
-import main.page.MainPage;
+import page.MainPage;
 import org.junit.Assert;
 import org.junit.Test;
 

@@ -2,7 +2,9 @@ package manager;
 
 import org.apache.commons.lang3.RandomStringUtils;
 
-public class TestValue extends RandomStringUtils {
+import static org.apache.commons.lang3.RandomStringUtils.randomAlphabetic;
+
+public class TestValue {
     /**
      * Contains test data for creating a user such as: login, password, name
      */

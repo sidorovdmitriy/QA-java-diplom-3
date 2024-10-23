@@ -1,6 +1,5 @@
-import api.models.User;
 import io.qameta.allure.junit4.DisplayName;
-import main.page.SignInPage;
+import page.SignInPage;
 import org.junit.Test;
 import org.junit.Assert;
 /**
