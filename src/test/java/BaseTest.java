@@ -30,7 +30,8 @@ public class BaseTest {
     @Step("Открыть base url")
     public void setUp() throws IOException {
         Properties props = new Properties();
-        FileInputStream ip = new FileInputStream("C:\\Users\\79276\\IdeaProjects\\new\\QA-java-diplom-3\\src\\main\\resources\\application.properties");
+        //"C:\\Users\\79276\\IdeaProjects\\new\\QA-java-diplom-3\\src\\main\\resources\\application.properties"
+        FileInputStream ip = new FileInputStream("src/main/resources/application.properties");
         props.load(ip);
         driver = BrowserFactory.getDriver(props.getProperty("browser"));
         driver.get(Client.BASE_URL);
